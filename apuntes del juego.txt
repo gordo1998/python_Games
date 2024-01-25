@@ -1,0 +1,36 @@
+El juego consiste en una nave que es capaz de alcanzar la velocidad de la luz y ha aparacido en un espacio 
+cerrado donde no puede salir porque no hay salida y se ha quedado sin combustible. Para poder salir de esa zona
+debe recolectar que son contenedores de combustible. Cada vez que recolecta un ítem, representa que la nave
+puede coger más velocidad y por ende debe cuidado de no chocar con los límites de los costados. La nave saldrá
+del espacio cerrado en el momento en el que recolecte suficientes ítems y pueda volver a viajar a la velocidad
+de la luz, pudiendo teletransportarse. 
+Si el jugador se estrella con los límites, vuelve a empezar el juego.
+
+¿Qué necesita nuestro juego?
+- Una nave espacial
+- bordes limitantes
+- ítems (contenedores)
+- una barra que vaya contando las cantidades restantes de combustible
+- Un fondo
+
+El juego empieza mostrando la pantalla del juego en sí. En la parte posterior se verá una cuadro de diálogo 
+que pondrá en contexto al jugador. También servirá para hacer un pequeño tutorial. Este tutorial puede saltarse
+si el usuario no quiere verlo. 
+
+
+** soluciones para la parte de mostrar la partida por primera vez y game over
+Decimos que no son los mismo. Sin embargo, la primera partida el codigo lo interpretará como game over
+porque la variable será true. Pero dentro del condicional, añadiremos otro que evaluará la variable primera
+partida. Si es verdadero, se ejecutará el código de este condicional y empezará la partida. Si es no es verdadero
+no ejecutará ese código y ejecutará el codigo de game over. 
+
+** Como hacemos para que, una vez explicada la historia, el jugador pueda saltarse el tutorial si así lo desea?
+Vamos a dividir la intro en dos partes, la primera la historia, la segunda el tutorial. En la segunda se espera
+la escucha de un evento, que será "enter". Si la tecla es apretada pues adios dialogo y empieza el juego.
+
+** El tutorial se mostrará en un recuadro y cuando quiera empezar a jugar que le de "enter". 
+
+En el bucle evalue si hay una colisión con el item. En caso de que sí, cambiariamos las coordenadas del conte-
+nedor. 
+
+**Mas adelante
